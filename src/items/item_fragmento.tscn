@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnd1i60obs3r6"]
+
+[ext_resource type="Script" uid="uid://b8fet68yhwlym" path="res://src/items/item_fragmento.gd" id="1_8d068"]
+[ext_resource type="Texture2D" uid="uid://bfd6ayn0inbhr" path="res://assets/images/zona1/backpack.png" id="2_26ack"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d068"]
+size = Vector2(26, 25)
+
+[node name="Item" type="Area2D"]
+script = ExtResource("1_8d068")
+sprite_texture = ExtResource("2_26ack")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8d068")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

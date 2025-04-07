@@ -1,0 +1,45 @@
+{
+	"zona1": [
+		{
+			"sprite": "res://assets/images/zona1/notebook.png",
+			"text": "Había salido rumbo a clases y no volvió a casa."
+		},
+		{
+			"sprite": "res://assets/images/zona1/backpack.png",
+			"text": "Sus padres la encontraron aún colgada en la silla."
+		},
+		{
+			"sprite": "res://assets/images/zona1/shoes.png",
+			"text": "Uno de sus zapatos quedó tirado en la calle."
+		},
+		{
+			"sprite": "res://assets/images/zona1/soccer.png",
+			"text": "Jugaba con sus amigos cuando ocurrió."
+		},
+		{
+			"sprite": "res://assets/images/zona2/cellphone.png",
+			"text": "La última llamada fue interrumpida de forma abrupta."
+
+		},
+		{
+			"sprite": "res://assets/images/zona2/pickup.png",
+			"text": "Vecinos reportaron una camioneta sin placas merodeando."
+		},
+		{
+			"sprite": "res://assets/images/zona2/hoodie.png",
+			"text": "Una prenda suya fue hallada a un costado del camino."
+		},
+		{
+			"sprite": "res://assets/images/zona3/silhouette.png",
+			"text": "La comunidad prefirió no hablar del tema."
+		},
+		{
+			"sprite": "res://assets/images/zona3/mute.png",
+			"text": "Testigos dijeron no haber visto ni oído nada."
+		},
+		{
+			"sprite": "res://assets/images/zona3/folder.png",
+			"text": "El expediente fue archivado"
+		}
+	]
+}

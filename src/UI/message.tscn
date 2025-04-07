@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcq4ky7pqgebc"]
+
+[ext_resource type="Script" uid="uid://bj2ljrvfygovt" path="res://src/UI/message.gd" id="1_k3mhl"]
+[ext_resource type="FontFile" uid="uid://c5csyrbk1j4m" path="res://assets/fonts/Mr. Junker MSX2 Mono.ttf" id="1_r566p"]
+
+[node name="Message" type="Node2D"]
+script = ExtResource("1_k3mhl")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_r566p")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

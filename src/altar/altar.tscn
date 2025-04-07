@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://cngnyqsdnuow7"]
+
+[ext_resource type="Texture2D" uid="uid://dkmhbqs33jgfi" path="res://assets/images/zona4/altar.png" id="1_42a50"]
+[ext_resource type="Script" uid="uid://d2vym0ekfjgcl" path="res://src/altar/altar.gd" id="1_rncwd"]
+[ext_resource type="FontFile" uid="uid://c5csyrbk1j4m" path="res://assets/fonts/Mr. Junker MSX2 Mono.ttf" id="2_t1byw"]
+[ext_resource type="AudioStream" uid="uid://dna0qcw6ono2h" path="res://assets/audio/wind.ogg" id="4_87tuy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1byw"]
+atlas = ExtResource("1_42a50")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rncwd"]
+atlas = ExtResource("1_42a50")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87tuy"]
+atlas = ExtResource("1_42a50")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx7fs"]
+atlas = ExtResource("1_42a50")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptvn6"]
+atlas = ExtResource("1_42a50")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0gna"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1byw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rncwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87tuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx7fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptvn6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Altar" type="Node2D"]
+script = ExtResource("1_rncwd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(60, 164)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_g0gna")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 45.0
+offset_right = 119.0
+offset_bottom = 81.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_t1byw")
+theme_override_font_sizes/font_size = 10
+text = "Recogiste todo lo que era.
+Y aún así, no pudiste encontrarlo."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_87tuy")
+volume_db = -8.0
+autoplay = true
+parameters/looping = true

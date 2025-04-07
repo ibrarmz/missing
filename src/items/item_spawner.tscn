@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyqjjpurfhrxg"]
+
+[ext_resource type="Script" uid="uid://cp7hvlwac5ac5" path="res://src/items/item_spawner.gd" id="1_2rjqw"]
+[ext_resource type="PackedScene" uid="uid://dnd1i60obs3r6" path="res://src/items/item_fragmento.tscn" id="2_6luvp"]
+
+[node name="ItemSpawner" type="Node2D"]
+script = ExtResource("1_2rjqw")
+falling_item_scene = ExtResource("2_6luvp")
