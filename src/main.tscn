@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://5xvpj7ovjw3o"]
+[gd_scene load_steps=13 format=3 uid="uid://5xvpj7ovjw3o"]
 
 [ext_resource type="PackedScene" uid="uid://eb1qdxwd6cf1" path="res://src/player/player.tscn" id="1_eewff"]
 [ext_resource type="Script" uid="uid://bct1pghvv7qdg" path="res://src/main.gd" id="1_kf8lf"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://bcq4ky7pqgebc" path="res://src/UI/message.tscn" id="7_rlaii"]
 [ext_resource type="AudioStream" uid="uid://bssxi24lx467o" path="res://assets/audio/Pack/4- Arvostus.ogg" id="9_kf8lf"]
 [ext_resource type="AudioStream" uid="uid://dna0qcw6ono2h" path="res://assets/audio/wind.ogg" id="10_mgm53"]
+[ext_resource type="Script" uid="uid://d1o6dacswth4c" path="res://src/borders.gd" id="11_uewes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgm53"]
+size = Vector2(20, 229)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kf8lf")
@@ -67,3 +71,16 @@ stream = ExtResource("10_mgm53")
 volume_db = -8.0
 autoplay = true
 parameters/looping = true
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+script = ExtResource("11_uewes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(70, 107.5)
+shape = SubResource("RectangleShape2D_mgm53")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(-70, 107)
+shape = SubResource("RectangleShape2D_mgm53")
